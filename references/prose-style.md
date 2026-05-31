@@ -2,9 +2,9 @@
 
 Required reading before any prose pass in this skill: Pass C of Phase 2, and Pass B of Phase 3.
 
-Apply the rubric below while drafting. Use it as a working checklist as you write — not as a post-hoc review.
+Apply the rubric below while drafting. Use it as a working checklist as you write, not as a post-hoc review.
 
-The goal is **clear but not dry**: definite, specific, concrete language with varied sentence shape — not flat declarative monotone, and not ornament either.
+The goal is **clear but not dry**: definite, specific, concrete language with varied sentence shape, not flat declarative monotone, and not ornament either.
 
 ## How to use
 
@@ -157,4 +157,4 @@ If you remember only a handful, these produce the biggest improvements:
 
 ## Tone
 
-Apply the guidance without flattening voice. Match the document's existing register — don't turn a literary line into corporate prose, and don't turn casual instructions into formal English. Aim for brief, direct, and specific.
+Apply the guidance without flattening voice. Match the document's existing register, don't turn a literary line into corporate prose, and don't turn casual instructions into formal English. Aim for brief, direct, and specific.
