@@ -82,6 +82,8 @@ Write `overall-structure.md` containing:
 - List of Diving Deeper topics: each with its intent and the use cases/components it covers
 - Reference items: list of modules to be documented as pure API spec
 
+**When you name Getting Started steps and Diving Deeper topics, read `references/headline-style.md` first.** Name them by the action the reader takes, not the bare noun. These names propagate into later phases, so getting them right here saves rework.
+
 ## CHECKPOINT
 
 Save the file, show its path, and ask the user to review and edit. They should actively decide:

@@ -25,6 +25,8 @@ Write `getting-started.md` containing, for each section:
 - A bulleted list of what the reader will learn in that section
 - The code block(s) the reader will encounter and run in that section
 
+**Before writing the section headers, read `references/headline-style.md`.** Name each section by the action the reader takes, not the bare noun. Show the benefit through the action. Never assert it with value-words, and never position against other tools.
+
 **The code is part of the structure, not filler added later.** A tutorial's real skeleton is the sequence of code samples; the prose is scaffolding around them. Setting the code arc before the prose ensures the prose serves the code, not the other way around.
 
 Draw code from the codebase's existing examples and tests where possible. Compose minimal new examples from the real API surface where needed. If you aren't confident in a snippet, leave a `// DRAFT` or `# TODO` comment so the user catches it at the checkpoint.

@@ -31,6 +31,8 @@ Write the file with:
 
 **Brevity discipline for every "one line" item above:** the four rules from Phase 2 Pass B apply (≤20 words, single subject–verb–object, no clause-joining punctuation, name the topic not the content). Run the same mandatory self-check after writing each line. If any check fails, delete and rewrite — don't edit. See `phases/2-getting-started.md` Pass B for the worked example. Without this discipline the user ends up reviewing the finished design decision rather than the *structure* of it.
 
+**When you name the API-walkthrough groupings, read `references/headline-style.md`.** Name each group by the action it serves, not the bare noun. This applies to the intent-based groupings you create, not to the fixed section labels (Intent, Design decisions, API walkthrough).
+
 **CHECKPOINT.** User reviews structure, grouping, and which design decisions are surfaced.
 
 ## Pass B: Fill in

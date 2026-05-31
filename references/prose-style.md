@@ -64,6 +64,13 @@ LLM prose tends to end paragraphs and sections with congratulatory or wrap-up se
 
 End paragraphs on the last substantive point. The closing slot is for real content, not a victory lap.
 
+## Show, don't tell
+
+Good documentation shows what the library does. It does not tell the reader how to feel about it. The same discipline that governs headlines (`references/headline-style.md`) governs prose.
+
+- **No hype.** Cut value-adjectives that assert quality without showing it: *powerful*, *seamless*, *effortless*, *blazing-fast*, *robust*, *flexible*. Show the behavior instead. "Handles 10,000 requests per second" beats "blazing-fast." It is *definite, specific, concrete* applied to value claims.
+- **No badmouthing alternatives.** Don't define the library against competitors. Drop *better than X*, *unlike clunky Y*, *the modern alternative to Z*. Superiority claims read as marketing and date fast. Neutral orientation for migrators is fine ("coming from Express, the equivalent is...").
+
 ## Rewrite the shape: em dashes, semicolons, and colons
 
 These three marks share a failure mode. They appear when a sentence tried to carry more content than it could hold. The model wants to add an aside, an elaboration, a second clause, a list, or a definition, and reaches for one of these marks to keep stitching.
