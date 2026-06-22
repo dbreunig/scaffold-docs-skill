@@ -87,7 +87,7 @@ Write `overall-structure.md` containing:
 Alongside `overall-structure.md`, write `.scaffold-docs.yml` in the same
 directory. This is the durable, machine-readable record the update flow
 (`phases/5-update.md`) reads later. It is the single source of truth for the
-audience and the sync point; `overall-structure.md` stays human planning content.
+audience and the sync point. `overall-structure.md` remains human planning content.
 
 ```yaml
 last_synced_sha: <current git HEAD SHA of the documented repo>
@@ -96,8 +96,8 @@ audience:
   primary: <primary label — 1–2 sentence description>
   secondary:
     - <label — description>
-  inferred: false        # false here: the user chose this audience in 1b
-ask_audience: true
+  inferred: false        # true if audience was inferred from docs; false = user chose it in 1b
+ask_audience: true       # false = user told us to stop asking about audience
 ```
 
 If the repo is not a git repository, omit `last_synced_sha` and note it; the
