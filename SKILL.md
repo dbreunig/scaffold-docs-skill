@@ -54,7 +54,7 @@ Each phase has its own file under `phases/`. **Load only the phase you're curren
 
 **Reference files** under `references/` are loaded as needed:
 
-- `references/audience-check.md`: required reading at the start of Phase 2 and Phase 3. The primary audience (selected in Phase 1b) governs every writing choice.
+- `references/audience-check.md`: required reading at the start of Phase 2 and Phase 3, and in Phase 5 when an audience is found. The primary audience (selected in Phase 1b) governs every writing choice.
 - `references/diving-deeper-heuristics.md`: used in Phase 1d for tagging topics, and in Phase 4 for kickback decisions.
 - `references/headline-style.md`: required reading at the structural passes that coin section names (Phase 1e, Phase 2 Pass A, Phase 3 Pass A). Names sections by the reader's action, not the bare noun. Loaded earlier than prose-style, which loads at the prose passes.
 - `references/prose-style.md`: required reading before *any* prose pass (Pass C of Phase 2; Pass B of Phase 3). Phase files signal exactly when.

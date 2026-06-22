@@ -75,8 +75,9 @@ Sort the diff into three groups and present them to the user:
   choose whether each warrants a doc change.
 
 If nothing is significant (and the user dismisses any borderline items), say so
-and stop. Do not invent busywork. Still update the sync point in 5e if the user
-wants the baseline advanced.
+and stop. Do not invent busywork. If you stop here, offer to advance the baseline
+anyway: ask the user whether to update `last_synced_sha` in 5e to the current
+`HEAD`, so the next run starts clean.
 
 ## 5d. Map changes to buckets, then walk each bucket
 
