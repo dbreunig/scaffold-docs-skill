@@ -22,13 +22,13 @@ If no docs exist at all, this is the wrong phase. Direct the user to Phase 1
 Read `audience` from `.scaffold-docs.yml`.
 
 - **Found** → use it as the governing lens for every change in this phase, exactly
-  as the creation flow does. Read `references/audience-check.md` now and apply it
-  throughout, as in Phase 2 and Phase 3.
+  as the creation flow does. Read `references/audience-check.md` now and apply its
+  three questions throughout this phase.
 - **Not found, `ask_audience: true`** (or no metadata file) → offer the user two
   paths, and act on their choice:
   1. *Define an audience now.* Run a trimmed Phase 1b: propose 3 candidate primary
      audiences from the codebase, the user picks one, then propose up to 3
-     secondaries. Write the result to `.scaffold-docs.yml` with `inferred: false`.
+     secondaries. Write the result to `.scaffold-docs.yml` with `audience.inferred: false`.
      Then apply `references/audience-check.md` as above.
   2. *Skip it.* Set `ask_audience: false` in `.scaffold-docs.yml` so this phase
      never prompts about audience again. Then proceed with the style anchor below.
