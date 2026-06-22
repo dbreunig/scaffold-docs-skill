@@ -25,6 +25,15 @@ Key principles baked in: write for a specific audience, build the reader's menta
 
 You will spend most of *your* time working on **Getting Started**. That's where agents need the most help.
 
+### Keeping docs in sync
+
+Code keeps changing after the docs are written. The skill records the audience and
+the commit the docs were last synced to in a `.scaffold-docs.yml` file. When you
+ask it to update or refresh the docs, it diffs the code since that commit, sorts
+the changes by whether they warrant doc edits, and walks the Getting Started,
+Diving Deeper, and Reference sections one at a time, proposing changes for your
+review in each.
+
 ## Installation
 
 Copy or symlink this folder into your Claude Code skills directory:
@@ -40,3 +49,13 @@ Most usage will invoke the skill directly, beginning the process with a clean co
 ```
 /scaffold-docs
 ```
+
+To refresh existing docs after the code has changed, ask the skill to update them:
+
+```
+/scaffold-docs update the docs
+```
+
+If no audience was recorded (for docs written before this feature, or by hand),
+the skill offers to define one with you, or to stop asking and match the existing
+docs' style instead.
