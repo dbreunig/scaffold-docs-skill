@@ -1,0 +1,8 @@
+last_synced_sha: af3fc26b1c23fc7c7374e9ca15d59f5bdc11bad5
+last_synced_date: 2026-06-23
+audience:
+  primary: Technical writers adopting AI assist — docs professionals who want an agent to scaffold structure and draft prose but keep editorial control, voice, and audience discipline. They care most about the audience-first method, prose standards, and the review checkpoints.
+  secondary:
+    - Devs documenting their own library — engineers producing docs for their own code; bring deep code knowledge, less writing-craft focus.
+  inferred: false        # true if audience was inferred from docs; false = user chose it
+ask_audience: true       # false = user told us to stop asking about audience

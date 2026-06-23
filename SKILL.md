@@ -1,6 +1,6 @@
 ---
 name: scaffold-docs
-description: Write documentation for a code library through an iterative top-down workflow with user review at each layer. Use whenever the user asks to document a codebase, library, or package — including phrases like "write docs for…", "document this library", "write technical docs", or any request to produce sustained documentation rather than inline code comments. The skill organizes output into Getting Started, Diving Deeper, and Reference sections, builds them progressively (structure → headers → topic sentences → paragraphs), and pauses for user review between each pass. Includes embedded prose-style guidance (Strunk & White) applied during every prose pass.
+description: Write documentation for a code library through an iterative top-down workflow with user review at each layer. Use whenever the user asks to document a codebase, library, or package — including phrases like "write docs for…", "document this library", "write technical docs", or any request to produce sustained documentation rather than inline code comments. The skill organizes output into Getting Started, Diving Deeper, and Reference sections, builds them progressively (structure → headers → topic sentences → paragraphs), and pauses for user review between each pass. Includes embedded prose-style guidance (Strunk & White) applied during every prose pass. Also use to update or refresh existing docs after code changes — phrases like "update the docs", "the docs are stale", or "sync the docs with the code" — which runs the update workflow in Phase 5.
 ---
 
 # Scaffold Docs
@@ -27,6 +27,7 @@ Three buckets. Each has its own purpose, structure, and file layout.
 - **Getting Started**: `getting-started.md`. One end-to-end tutorial, narrative, covering a single representative use case that touches the library's most important components. Approachable. After reading or working through it, the reader has enough mental model to explore on their own.
 - **Diving Deeper**: `diving-deeper/<topic>.md`, one file per topic. Per topic: intent of the topic, design decisions and the reasons for them, then a walk through the relevant API organized by the *intent* of each object (not alphabetical).
 - **Reference**: `reference/<module>.md`, one file per module. Close to pure API spec. Organized by class/function/module. Lookup-oriented, not narrative.
+- **Metadata**: `.scaffold-docs.yml`. Machine-readable record of the audience, the last-synced git SHA, and the `ask_audience` flag. Written by Phase 1, read by Phase 5 to refresh docs after code changes.
 
 ## Workflow overview
 
@@ -39,17 +40,21 @@ Phase 2: Build Getting Started in three passes    → phases/2-getting-started.m
   Pass C: full paragraphs (using references/prose-style.md)
 Phase 3: Build each selected Diving Deeper topic  → phases/3-diving-deeper.md     [USER REVIEW × 2 per topic]
 Phase 4: Build Reference                          → phases/4-reference.md         [USER REVIEW per module]
+Phase 5: Update existing docs after code changes  → phases/5-update.md            [USER REVIEW per bucket]
+  (read .scaffold-docs.yml → baseline diff → classify changes → walk buckets)
 ```
 
 ## How to use this skill
 
 Each phase has its own file under `phases/`. **Load only the phase you're currently working on.**
 
+**Updating existing docs?** When the docs already exist and the user wants them refreshed after code changes, start at Phase 5 (`phases/5-update.md`) instead of Phase 1. Phase 5 reads `.scaffold-docs.yml` to recover the audience and the last-synced commit.
+
 **Between phases, you may clear context.** The artifacts on disk (`overall-structure.md`, `getting-started.md`, etc.) are the durable handoff. Each phase file begins with a "resuming from cold context" section listing exactly which files to read to get caught up before starting that phase. Use this when the conversation has gotten long, when crossing sessions, or whenever clearing improves focus.
 
 **Reference files** under `references/` are loaded as needed:
 
-- `references/audience-check.md`: required reading at the start of Phase 2 and Phase 3. The primary audience (selected in Phase 1b) governs every writing choice.
+- `references/audience-check.md`: required reading at the start of Phase 2 and Phase 3, and in Phase 5 when an audience is found. The primary audience (selected in Phase 1b) governs every writing choice.
 - `references/diving-deeper-heuristics.md`: used in Phase 1d for tagging topics, and in Phase 4 for kickback decisions.
 - `references/headline-style.md`: required reading at the structural passes that coin section names (Phase 1e, Phase 2 Pass A, Phase 3 Pass A). Names sections by the reader's action, not the bare noun. Loaded earlier than prose-style, which loads at the prose passes.
 - `references/prose-style.md`: required reading before *any* prose pass (Pass C of Phase 2; Pass B of Phase 3). Phase files signal exactly when.

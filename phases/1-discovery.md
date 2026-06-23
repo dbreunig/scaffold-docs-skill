@@ -82,11 +82,32 @@ Write `overall-structure.md` containing:
 - List of Diving Deeper topics: each with its intent and the use cases/components it covers
 - Reference items: list of modules to be documented as pure API spec
 
+### Write the metadata file
+
+Alongside `overall-structure.md`, write `.scaffold-docs.yml` in the same
+directory. This is the durable, machine-readable record the update flow
+(`phases/5-update.md`) reads later. It is the single source of truth for the
+audience and the sync point. `overall-structure.md` remains human planning content.
+
+```yaml
+last_synced_sha: <current git HEAD SHA of the documented repo>
+last_synced_date: <today's date, YYYY-MM-DD>
+audience:
+  primary: <primary label — 1–2 sentence description>
+  secondary:
+    - <label — description>
+  inferred: false        # true if audience was inferred from docs; false = user chose it in 1b
+ask_audience: true       # false = user told us to stop asking about audience
+```
+
+If the repo is not a git repository, omit `last_synced_sha` and note it; the
+update flow falls back to the doc files' last commit.
+
 **When you name Getting Started steps and Diving Deeper topics, read `references/headline-style.md` first.** Name them by the action the reader takes, not the bare noun. These names propagate into later phases, so getting them right here saves rework.
 
 ## CHECKPOINT
 
-Save the file, show its path, and ask the user to review and edit. They should actively decide:
+Save both files (`overall-structure.md` and `.scaffold-docs.yml`), show their paths, and ask the user to review and edit. They should actively decide:
 
 - Which Diving Deeper topics get written up (the user picks, and not every candidate must be written)
 - The order and grouping of Getting Started steps
