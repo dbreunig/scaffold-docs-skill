@@ -82,7 +82,7 @@ Write `overall-structure.md` containing:
 - List of Diving Deeper topics: each with its intent and the use cases/components it covers
 - Reference items: list of modules to be documented as pure API spec
 
-### Also write the metadata file
+### Write the metadata file
 
 Alongside `overall-structure.md`, write `.scaffold-docs.yml` in the same
 directory. This is the durable, machine-readable record the update flow
